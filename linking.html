@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка на подключение</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/index.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="tariffs.html">Тарификация</a></li>
+            <li><a href="billing.html">Биллинг</a></li>
+            <li><a href="other.html">Другое</a></li>
+        </ul>
+    </nav>
+    <h1>Заявка на подключение интернета</h1>
+    <form id="connectionForm" action="/application" method="post" onsubmit="return submitForm();">   
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" size="30" value="" /><br />
+
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" size="30" value="" /><br />
+
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" size="30" value="" /><br />
+
+        <label for="creator">Номер телефона:</label>
+        <input type="text" id="creator" name="creator" size="30" value="+7" /><br />
+
+        <p>Выберите желаемую скорость интернета:</p>
+        <input type="radio" id="50" name="inet" value="50" checked />
+        <label for="50">50 Мб/с</label><br />
+
+        <input type="radio" id="100" name="inet" value="100" />
+        <label for="100">100 Мб/с</label><br />
+
+        <input type="radio" id="250" name="inet" value="250" />
+        <label for="250">250 Мб/с</label><br />
+
+        <input type="radio" id="500" name="inet" value="500" />
+        <label for="500">500 Мб/с</label><br />
+
+        <p>Выберите способ подключения:</p>
+        <select name="browsers" id="browsers" title="Способ подключения">
+            <option selected>Подключу самостоятельно</option>
+            <option>Подключу с вашей удаленной помощью</option>
+            <option>Помощь бригады подключения</option>
+        </select><br />
+
+        <p>Удобна ли была форма заявки? Оставьте свой комментарий!</p>
+        <textarea name="opinion" rows="4" cols="30" title="Отзыв" placeholder="Ваш отзыв"></textarea><br />
+        <input type="submit" value="Отправить" />
+        <input type="reset" value="Очистить" />
+    </form>
+    <footer>
+        <p>&copy; COPYRIGHT, ВСЕ ПРАВА ЗАЩИЩЕНЫ, LOGO: SOLUTIONS. 2023</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('connectionForm');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch('http://localhost:7000/application', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(Object.fromEntries(formData)),
+                    });
+
+                    if (response.ok) {
+                        alert('Заявка принята. С вами свяжется наш менеджер.');
+                        form.reset();
+                    } else {
+                        alert('Что-то пошло не так. Попробуйте еще раз.');
+                    }
+                } catch (error) {
+                    console.error('Error submitting application:', error);
+                    alert('Ошибка при отправке заявки. Попробуйте еще раз.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

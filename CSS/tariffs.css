@@ -1,0 +1,77 @@
+/* CSS/billing_and_tariff_styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tariffs-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px; /* Добавим небольшой отступ сверху */
+}
+
+.tariff {
+    background-color: #f5f5f5; /* Цвет фона тарифа */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блока */
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.3s ease-in-out; /* Плавное изменение при наведении */
+}
+
+.tariff:hover {
+    transform: scale(1.05); /* Немного увеличиваем размер при наведении */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,59 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/slider.css" />
+    <style>
+      footer{
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body background="IMG/1.jpg">
+    <header>
+      <h1>Главная страница</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#tariff-section">Тарификация</a></li>
+        <li><a href="#billing-section">Биллинг</a></li>
+        <li><a href="#other-section">Другое</a></li>
+      </ul>
+    </nav>
+
+    <section id="tariff-section">
+      <h2>Тарификация</h2>
+      <button onclick="navigateToTariffPage()">Перейти к тарифам</button>
+    </section>
+
+    <section id="billing-section">
+      <h2>Биллинг</h2>
+      <button onclick="navigateToBillingPage()">Перейти к биллингу</button>
+    </section>
+
+    <section id="other-section">
+      <h2>Другое</h2>
+      <button onclick="navigateToOtherPage()">Перейти к другим функциям</button>
+    </section>
+
+    <section class="container_slider_css">
+      <img class="photo_slider_css" src="IMG/Слайд1.jpg" alt="" />
+      <img class="photo_slider_css" src="IMG/Слайд4.jpg" alt="" />
+      <img class="photo_slider_css" src="IMG/Слайд3.jpg" alt="" />
+      <img class="photo_slider_css" src="IMG/Слайд4.jpg" alt="" />
+    </section>
+    <script src="JS/index.js"></script>
+    <footer>
+      <p>
+        &copy; COPYRIGHT, ВСЕ ПРАВА ЗАЩИЩЕНЫ, LOGO: BILLING_TARIFICATIONS. 2023
+      </p>
+    </footer>
+  </body>
+</html>

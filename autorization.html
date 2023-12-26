@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление биллингом и тарификацией</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body background="IMG/1.jpg">
+    <header>
+        <h1>Модуль управления биллингом и тарификацией</h1>
+    </header>
+
+    <section id="authentication">
+        <h2>Авторизация</h2>
+        <form id="loginForm">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <p class="signup">Нет аккаунта?<a href="register.html"> Зарегистрироваться</a></p>
+
+            <button type="button" onclick="loginUser()">Войти</button>
+        </form>
+    </section>
+
+    <section id="billing-module" style="display: none;">
+        <h2>Биллинг</h2>
+        <!-- Добавьте элементы управления биллингом здесь -->
+    </section>
+
+    <section id="tariff-module" style="display: none;">
+        <h2>Тарификация</h2>
+        <!-- Добавьте элементы управления тарификацией здесь -->
+    </section>
+
+    <footer>
+        &copy; COPYRIGHT, ВСЕ ПРАВА ЗАЩИЩЕНЫ, LOGO: BILLING_TARIFICATIONS. 2023
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

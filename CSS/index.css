@@ -1,0 +1,124 @@
+/* dashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1; /* Цвет фона */
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #bdc3c7; /* Цвет границы */
+    border-radius: 10px; /* Скругление углов */
+    background-color: #fff; /* Цвет фона секции */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    display: inline-block; /* Добавляем инлайн-блок для расположения в ряд */
+    vertical-align: top; /* Выравниваем по верхнему краю */
+    width: 30%; /* Ширина секции (можно регулировать) */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+button:hover {
+    background-color: #2980b9; /* Цвет при наведении */
+}
+
+/* Добавленные стили для вашей формы */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Увеличение скругления углов для формы */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Более заметная тень */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Увеличение отступа между метками */
+    color: #3498db; /* Цвет текста меток */
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px; /* Увеличение отступов вокруг текстовых полей */
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7; /* Цвет границы текстовых полей */
+    border-radius: 5px; /* Скругление углов текстовых полей */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #e74c3c; /* Живой красный цвет для кнопок отправки и сброса */
+    color: #fff;
+    padding: 15px; /* Большие кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #c0392b; /* Цвет при наведении */
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
